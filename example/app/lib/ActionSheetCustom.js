@@ -55,6 +55,12 @@ class ActionSheet extends React.Component {
     })
   }
 
+  hideByBackground = () => {
+    this._hideSheet(() => {
+      this.setState({visible: false})
+    })
+  }
+
   _cancel = () => {
     const { cancelButtonIndex } = this.props
     // 保持和 ActionSheetIOS 一致，
@@ -188,7 +194,7 @@ class ActionSheet extends React.Component {
         <View style={[styles.wrapper]}>
           <Text
             style={[styles.overlay]}
-            onPress={this._cancel}
+            onPress={this.hideByBackground}
           />
           <Animated.View
             style={[
