@@ -8,7 +8,8 @@ export default {
     bottom: 0,
     left: 0,
     opacity: 0.4,
-    backgroundColor: '#000'
+    backgroundColor: '#000',
+    flex: 1
   },
   wrapper: {
     flex: 1,
